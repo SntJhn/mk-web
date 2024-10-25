@@ -82,7 +82,7 @@ export const ContactForm = () => {
                         <h3>
                             <strong>Call us on mobile.</strong>
                             <br />
-                            +63 95 672 4117
+                            0956724117
                         </h3>
                         <h3>
                             <strong>Send us an email.</strong>
