@@ -3,6 +3,7 @@ import { Link as ScrollLink } from 'react-scroll';
 import { Link as RouterLink, useLocation } from 'react-router-dom';
 import styles from './Navbar.module.css';
 import { getImageUrl } from '../../utils';
+import MKLogo from '../../../assets/nav/MKLOGO.png';
 
 export const Navbar = () => {
     const [menuOpen, setMenuOpen] = useState(false);
@@ -54,7 +55,7 @@ export const Navbar = () => {
         >
             <RouterLink className={styles.title} to="/" onClick={backToTop}>
                 <img
-                    src="assets/logo/MKLOGO.png"
+                    src={MKLogo}
                     width="20%"
                     height="auto"
                     alt="Logo"

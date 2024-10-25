@@ -1,6 +1,7 @@
 import { useEffect, useRef } from 'react';
 import { animateTitles } from './animate'; // Import the animation function
 import styles from './Hero.module.css';
+import HeroLogo from '../../../assets/nav/HeroLogo.png';
 
 const Hero = () => {
     const textWrapperRef = useRef(null);
@@ -37,7 +38,7 @@ const Hero = () => {
         <div className={styles.snap}>
             <div className={styles.container}>
                 <img
-                    src="assets/logo/HeroLogo.png"
+                    src={HeroLogo}
                     width="30%"
                     height="auto"
                     alt=""
