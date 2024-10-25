@@ -54,7 +54,7 @@ export const Navbar = () => {
         >
             <RouterLink className={styles.title} to="/" onClick={backToTop}>
                 <img
-                    src="assets/logo/MK LOGO.png"
+                    src="assets/logo/MKLOGO.png"
                     width="20%"
                     height="auto"
                     alt="Logo"
