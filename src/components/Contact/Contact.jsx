@@ -9,7 +9,7 @@ export const Contact = () => {
             <ul className={styles.links}>
                 <li className={styles.link}>
                     <i class="fa-solid fa-envelope fa-xl"></i>
-                    <a href="mailto:mkdisenyo@email.com" target="_blank">
+                    <a href="mailto:mkdisenyo@gmail.com" target="_blank">
                         mkdisenyo@email.com
                     </a>
                 </li>
