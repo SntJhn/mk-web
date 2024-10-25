@@ -87,7 +87,7 @@ export const ContactForm = () => {
                         <h3>
                             <strong>Send us an email.</strong>
                             <br />
-                            mkdisenyo@email.com
+                            mkdisenyo@gmail.com
                         </h3>
                     </div>
                 </div>
