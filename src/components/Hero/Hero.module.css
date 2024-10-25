@@ -1,0 +1,237 @@
+@import '../../vars.css';
+
+.container {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* or auto for .containerAbout depending on content */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.2);
+    object-fit: contain;
+    background: linear-gradient(
+            to bottom,
+            rgba(0, 0, 0, 0) 0%,
+            rgba(0, 0, 0, 0.5) 100%
+        ),
+        url('../../../assets/logo/Hero.jpg') center center/cover no-repeat;
+}
+
+.container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.4); /* Adjust the opacity for darkness */
+    z-index: 1; /* Ensure overlay is above the image */
+}
+
+.Logo {
+    position: relative; /* Ensure the logo is above the overlay */
+    z-index: 1;
+    animation: fadeAnimate 3s;
+    /* opacity: 50%; */
+}
+
+@keyframes fadeAnimate {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.containerAbout {
+    position: relative; /* Added position relative to contain absolutely positioned pseudo-element */
+    height: 100%;
+    width: 100%;
+    display: flex;
+    background-color: var(--color-primary);
+    object-fit: contain;
+    color: var(--color-bg);
+    /* scroll-snap-align: start; */
+    padding: 100px;
+}
+
+.briefAbout {
+    justify-content: center;
+    padding: 14px 8px;
+    z-index: 1;
+    margin-top: 5%;
+    padding-bottom: 200px;
+}
+.containerMotto {
+    position: relative; /* Added position relative to contain absolutely positioned pseudo-element */
+    height: 100%;
+    width: 100%;
+    background-color: var(--color-primary);
+    color: var(--color-bg);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 80px 215px 100px 223px;
+}
+
+.leftColumn {
+    flex: 1;
+    line-height: 1.2;
+    color: var(--color-text);
+}
+
+.rightColumn {
+    flex: 1;
+    font-size: 1.1rem;
+    text-align: right;
+    font-weight: 100;
+    max-width: 550px;
+}
+
+h1 {
+    font-size: var(--font-size-header);
+    font-family: var(--font-urbanist);
+    margin: 0;
+    opacity: 0; /* Start hidden */
+    transform: translateX(-100px); /* Start off-screen */
+    transition: opacity 1s ease-out, transform 1s ease-out; /* Smooth transition */
+}
+
+p {
+    color: var(--color-gray);
+    margin-top: -50px;
+    font-size: var(--font-size-paragraph);
+    opacity: 0; /* Start hidden */
+    transform: translateX(-100px); /* Start off-screen */
+    transition: opacity 1s ease-out, transform 1s ease-out; /* Smooth transition */
+}
+
+h2 {
+    color: var(--color-secondary);
+    font-size: 3rem;
+    text-align: center;
+    /* margin-bottom: 20px; */
+    /* animation: appear 1s linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%; */
+    text-decoration: underline;
+    font-family: var(--font-amaranth);
+    /* width: 80%; */
+    opacity: 0; /* Start hidden */
+    transform: translateX(-100px); /* Start off-screen */
+    transition: opacity 1s ease-out, transform 1s ease-out; /* Smooth transition */
+}
+
+.vision {
+    margin-top: 9px;
+}
+
+h5 {
+    padding: 15px 20px;
+    text-align: justify;
+    font-size: var(--font-size-paragraph);
+    color: var(--color-text);
+    letter-spacing: 1px;
+    font-weight: 100;
+    line-height: 1.6;
+    /* animation: appear 5s linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 30%; */
+    font-family: var(--font-urbanist);
+    opacity: 0; /* Start hidden */
+    transform: translateX(-100px); /* Start off-screen */
+    transition: opacity 1s ease-out, transform 1s ease-out; /* Smooth transition */
+}
+
+span {
+    font-weight: bold;
+    color: var(--color-secondary);
+}
+
+.columnsContainer {
+    display: flex;
+    padding: 0 90px 0 100px;
+    /* justify-content: space-between; */
+    /* gap: 20px; Optional: Adds some spacing between the two columns */
+}
+
+.column {
+    flex: 1; /* This will allow both columns to take up equal space */
+    /* padding: 20px; Optional: Adds padding inside each column */
+}
+
+.appear {
+    opacity: 1;
+    transform: translateX(0); /* Element is visible and in place */
+}
+
+/* @keyframes appear {
+    from {
+        opacity: 0;
+        clip-path: inset(100% 100% 0 0);
+        transform: translateX(-100px);
+    }
+    to {
+        opacity: 1;
+        clip-path: inset(0 0 0 0);
+        transform: translateX(0px);
+    }
+} */
+
+.textwrapper {
+    z-index: 1;
+}
+
+@media screen and (max-width: 830px) {
+    .columnsContainer {
+        padding: 0;
+    }
+
+    .briefAbout {
+        padding: 0 20px 100px 20px;
+    }
+
+    .Logo {
+        width: 70%;
+    }
+
+    .containerAbout {
+        padding: 50px 0;
+    }
+
+    .briefAbout {
+        margin-top: 7%;
+    }
+
+    h5 {
+        font-size: var(--font-size-paragraph-mobile);
+        padding: 20px 26px;
+    }
+
+    .columnsContainer {
+        flex-direction: column; /* Stacks the columns on smaller screens */
+    }
+
+    .containerMotto {
+        padding: 80px 35px 100px 40px;
+        flex-direction: column;
+    }
+
+    .rightColumn {
+        text-align: left;
+        max-width: 350px;
+        padding-top: 50px;
+        margin-left: 0;
+    }
+
+    h1 {
+        font-size: var(--font-size-header-mobile);
+    }
+
+    p {
+        padding-top: 20px;
+        font-size: var(--font-size-paragraph-mobile);
+    }
+}

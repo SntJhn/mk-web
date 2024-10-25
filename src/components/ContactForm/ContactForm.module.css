@@ -1,0 +1,167 @@
+@import '../../vars.css';
+
+.contactFormContainer {
+    padding: 150px 200px 100px 228px;
+    box-sizing: border-box;
+}
+
+.column {
+    padding-top: 60px;
+    display: flex;
+}
+
+.contactUs {
+    padding-top: 25px;
+    font-family: var(--font-amaranth);
+    text-align: center;
+    font-size: var(--font-size-l);
+    color: var(--color-secondary);
+}
+
+.contactUsDesc {
+    font-family: var(--font-urbanist);
+    text-align: center;
+}
+
+.left {
+    flex: 1;
+    padding-right: 100px;
+}
+
+.right {
+    flex: 1;
+    color: var(--color-text); /* Use a variable for text color */
+}
+
+.title {
+    color: var(--color-secondary);
+    font-family: var(--font-amaranth);
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.description {
+    margin-bottom: 30px;
+    opacity: 1;
+    color: var(--color-text);
+    font-family: var(--font-urbanist);
+    font-weight: 100;
+}
+
+.steps {
+    list-style-type: decimal;
+    margin-left: 20px;
+}
+
+.steps li {
+    margin-bottom: 15px;
+    color: var(--color-text);
+    font-family: var(--font-urbanist);
+    font-weight: 100;
+}
+
+h3 {
+    color: var(--color-text);
+    font-family: var(--font-urbanist);
+    font-weight: 100;
+}
+
+.contactDetails {
+    margin-top: 30px;
+    border-top: 1px solid #ccc;
+    padding-top: 15px;
+}
+
+.form {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    font-size: 16px;
+}
+
+.inputField {
+    font-family: inherit;
+    width: 100%;
+    height: 35px;
+    padding: 7px;
+    outline: none;
+    margin-top: 5px;
+    border: 1px solid rgb(220, 220, 220);
+    border-radius: 3px;
+}
+
+.inputField:focus {
+    border: 3px solid rgb(254, 209, 6);
+}
+
+.textareaField {
+    font-family: inherit;
+    max-width: 100%;
+    min-width: 100%;
+    width: 100%;
+    margin-top: 5px;
+    max-height: 200px;
+    min-height: 200px;
+    padding: 7px;
+    outline: none;
+    border: 1px solid rgb(220, 220, 220);
+    border-radius: 3px;
+    box-shadow: inset;
+}
+
+.textareaField:focus {
+    border: 3px solid rgb(254, 209, 6);
+}
+
+.label {
+    margin-top: 1rem;
+    color: var(--color-text);
+    font-size: var(--font-size-paragraph);
+    font-family: var(--font-urbanist);
+    margin-bottom: 5px;
+}
+
+.submitButton {
+    margin-top: 2rem;
+    cursor: pointer;
+    background: var(--color-secondary);
+    color: var(--color-primary);
+    border: none;
+    font-size: var(--font-size-paragraph);
+    padding: 15px 30px;
+    border-radius: 5px;
+}
+
+@media screen and (max-width: 830px) {
+    .contactFormContainer {
+        padding: 100px 38px 100px 40px;
+    }
+
+    .form {
+        width: 100%;
+        padding: 0;
+        margin: 0;
+    }
+
+    .right {
+        padding: 0;
+        margin: 40px 0;
+    }
+
+    .left {
+        padding: 0;
+    }
+
+    .column {
+        flex-direction: column;
+    }
+
+    .contactUs {
+        padding-top: 50px;
+        font-size: var(--font-size-header-mobile);
+    }
+
+    .contactUsDesc {
+        font-size: var(--font-size-paragraph-mobile);
+    }
+}

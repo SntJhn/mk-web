@@ -1,0 +1,189 @@
+@import '../../vars.css';
+
+.project-container {
+    padding: 150px 150px 100px 162px;
+}
+
+.projects-title {
+    color: var(--color-secondary);
+    font-size: 3rem;
+    text-align: center;
+    /* margin-bottom: 50px; */
+    animation: appear 1s linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
+    text-decoration: underline;
+    font-family: var(--font-amaranth);
+    /* width: 80%; */
+}
+
+@keyframes appear {
+    from {
+        opacity: 0;
+        /* clip-path: inset(100% 100% 0 0); */
+        transform: translateX(-100px);
+    }
+    to {
+        opacity: 1;
+        /* clip-path: inset(0 0 0 0); */
+        transform: translateX(0px);
+    }
+}
+
+@keyframes floating {
+    0% {
+        transform: translate(0, 0px);
+    }
+    50% {
+        transform: translate(0, 10px);
+    }
+    100% {
+        transform: translate(0, -0px);
+    }
+}
+
+.projects-overlay {
+    margin-top: 0; /* Reset margin to 0 to avoid pushing the overlay off-screen */
+    width: 100%;
+    height: 100vh;
+    background: rgba(
+        14,
+        14,
+        16,
+        0.95
+    ); /* Slight transparency for better visual effect */
+    position: fixed;
+    top: 0; /* Ensure the overlay is at the top of the viewport */
+    left: 0; /* Ensure the overlay is at the left edge of the viewport */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    z-index: 100; /* Increase z-index to ensure it appears above other content */
+}
+
+.close-btn,
+.prev-btn,
+.next-btn {
+    padding: 20px;
+    background-color: rgba(14, 14, 16, 0);
+    border: none;
+    font-size: 30px;
+    cursor: pointer;
+    color: #fed106;
+    position: absolute;
+}
+
+.close-btn {
+    top: 10px;
+    right: 10px;
+    font-size: 30px;
+}
+
+.prev-btn {
+    left: 10px;
+    font-size: 40px;
+}
+
+.next-btn {
+    right: 10px;
+    font-size: 40px;
+}
+
+.projects-image {
+    width: auto;
+    max-width: 90%;
+    max-height: 90%;
+}
+
+/* img {
+    animation: appear linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
+} */
+
+.masonry-grid img {
+    width: 100%;
+    display: block;
+    cursor: pointer;
+}
+
+.image-container {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    cursor: pointer;
+}
+
+.image-container img {
+    width: 100%;
+    display: block;
+    transition: transform 0.3s ease-in-out;
+}
+
+.image-container:hover img {
+    transform: scale(0.9);
+    opacity: 50%;
+}
+
+.image-text {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    /* background: rgba(0, 0, 0, 0.6);  */
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.image-container:hover .image-text {
+    opacity: 1;
+}
+
+.grid {
+    padding: 2% 4%;
+}
+
+@media screen and (max-width: 830px) {
+    .project-container {
+        padding: 150px 0;
+    }
+
+    .projects-title {
+        margin-bottom: 20px;
+    }
+
+    .projects-image {
+        max-width: 80%;
+        max-height: 80%;
+    }
+
+    .close-btn {
+        top: 10px;
+        right: 10px;
+        font-size: 30px;
+    }
+
+    .prev-btn {
+        left: -10px;
+        font-size: 40px;
+    }
+
+    .next-btn {
+        right: -10px;
+        font-size: 40px;
+    }
+
+    .grid {
+        overflow: hidden;
+        padding-bottom: 110px;
+    }
+}

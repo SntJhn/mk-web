@@ -1,0 +1,24 @@
+:root {
+    /* Colors */
+    --color-text: #fff;
+    --color-primary: #0e0e10;
+    --color-secondary: rgb(254, 209, 6);
+    --color-bg: #0e0e10;
+    --color-gray: #535356;
+
+    /* Fonts */
+    --font-poppins: 'Poppins';
+    --font-open-sans: 'Open-sans';
+    --font-robot: 'Roboto';
+    --font-anton: 'Anton';
+    --font-urbanist: 'Urbanist';
+    --font-amaranth: 'Amaranth';
+
+    /* Font Size */
+    --font-size-paragraph: 1.2rem;
+    --font-size-paragraph-mobile: 1rem;
+    --font-size-m: 3rem;
+    --font-size-header-mobile: 3rem;
+    --font-size-header: 6rem;
+    --font-size-l: 5rem;
+}
