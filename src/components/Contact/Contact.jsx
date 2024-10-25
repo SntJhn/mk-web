@@ -10,7 +10,7 @@ export const Contact = () => {
                 <li className={styles.link}>
                     <i class="fa-solid fa-envelope fa-xl"></i>
                     <a href="mailto:mkdisenyo@gmail.com" target="_blank">
-                        mkdisenyo@email.com
+                        mkdisenyo@gmail.com
                     </a>
                 </li>
                 <li className={styles.link}>
