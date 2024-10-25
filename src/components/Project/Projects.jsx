@@ -28,8 +28,14 @@ const images = [
         url: getImageUrl('proj/PROPOSED TWO STOREY RESIDENCE (DASMA).jpg'),
         text: 'Two Storey Residence - Dasma',
     },
-    { url: getImageUrl('proj/4 bedroom 1.png'), text: '4 Bedroom Design 1' },
-    { url: getImageUrl('proj/4 bedroom 2.png'), text: '4 Bedroom Design 2' },
+    {
+        url: getImageUrl('proj/4 bedroom 1.png'),
+        text: '4 Bedroom Design Front View',
+    },
+    {
+        url: getImageUrl('proj/4 bedroom 2.png'),
+        text: '4 Bedroom Design Back View',
+    },
     { url: getImageUrl('proj/kiah residence.jpg'), text: 'Kiah Residence' },
     { url: getImageUrl('proj/1_1 - Photo.jpg'), text: 'Project 1_1' },
     { url: getImageUrl('proj/1_7 - Photo.jpg'), text: 'Project 1_7' },
